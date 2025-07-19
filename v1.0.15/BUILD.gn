@@ -1,0 +1,8 @@
+import("//build/templates/build_template.gni")
+build_rust("paste") {
+  crate_type = "proc-macro"
+  sources = [ "src/lib.rs" ]
+  edition = "2018"
+
+  rustflags = [ "--cap-lints=allow" ]
+}
